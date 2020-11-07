@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.15)
+project(libpq_test)
+add_executable(${PROJECT_NAME} main.cc)
+find_package(PostgreSQL REQUIRED)
+target_link_libraries(${PROJECT_NAME} PRIVATE PostgreSQL::PostgreSQL)
